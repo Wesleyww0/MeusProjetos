@@ -4,6 +4,12 @@ var inputIdade = document.getElementById('idade');
 var inputCPF = document.getElementById('cpf');
 var msgNome = document.getElementsByClassName('msg-nome')[0];
 var msgGeral = document.getElementsByClassName('msg-geral')[0];
+function NomeComposto (inputName){
+    const nomeComoArray = inputName.split(' ')
+    return nomeComoArray.length >= 2;
+}
+
+
 
 btnValidar.addEventListener('click' , function() {
     if (inputNome.value == ''   ){
@@ -18,6 +24,12 @@ btnValidar.addEventListener('click' , function() {
         msgGeral.classList.remove('esconder');
         msgGeral.classList.add('exibir');
         console.log('Nome não contem mais de 3 caracteres');
+    }else if(NomeComposto (inputNome.value) == false ){ // validando o nome composto com um função
+        inputNome.style.border = '1px solid red';               
+        msgGeral.textContent = 'Erros: \n Nome deve ser composto!';
+        msgGeral.classList.remove('esconder');
+        msgGeral.classList.add('exibir');
+        console.log('Nome deve ser composto');
     }else{
       //inputNome.style.backgroundColor = 'white'
       inputNome.style.border = '1px solid green';     
