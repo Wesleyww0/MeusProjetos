@@ -55,9 +55,16 @@ btnValidar.addEventListener('click' , function() {
         msgGeral.classList.remove('esconder');
         msgGeral.classList.add('exibir');
         console.log('Idade não informada');
+    }else if(inputIdade.value < 18 || inputIdade.value > 60 ){ // validando a idade
+        inputNome.style.border = '1px solid red';               
+        msgGeral.textContent = msgGeral.textContent +' Idade deve estar entre 18 e 60 anos!';
+        msgGeral.classList.remove('esconder');
+        msgGeral.classList.add('exibir');
+        console.log('Idade deve estar entre 18 e 60 anos');
     }else{
         inputIdade.style.border = '1px solid green';
-      
+        msgGeral.classList.add('esconder');
+        msgGeral.classList.remove('exibir');
         console.log('Idade informado ' + inputIdade.value);
     }
 
@@ -68,9 +75,24 @@ btnValidar.addEventListener('click' , function() {
         msgGeral.classList.remove('esconder');
         msgGeral.classList.add('exibir');
         console.log('CPF não informado');
+    }else if(inputCPF.value.length < 11 || inputCPF.value.length > 11){
+        inputNome.style.border = '1px solid red';               
+        msgGeral.textContent = msgGeral.textContent + ' CPF não contem os 11 digitos!';
+        msgGeral.classList.remove('esconder');
+        msgGeral.classList.add('exibir');
+        console.log('CPF não contem os 11 digitos!');
     }else{
         inputCPF.style.border = '1px solid green';
-        
+        msgGeral.classList.add('esconder');
+      msgGeral.classList.remove('exibir');
         console.log('CPF informado ' + inputCPF.value);
+    }
+
+    if (inputNome.style.border =='1px solid green'&& inputIdade.style.border =='1px solid green'&& inputCPF.style.border =='1px solid green'){
+        msgGeral.textContent = 'Parabens, você validou o formulario todo';
+        msgGeral.style.backgroundColor = 'lightgreen';
+        msgGeral.style.color = 'green';
+        msgGeral.classList.remove('esconder');
+        msgGeral.classList.add('exibir');
     }
 })
