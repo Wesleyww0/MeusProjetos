@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXercicio 4 - Funçoes</title>
+    <style>
+        .esconder {
+            display: none !important;
+        }
+
+        .exibir {
+            display: block !important;
+        }
+        .msg-geral {
+            /* display : none*/
+            color: red;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 10px;
+            background-color: rgb(242, 216, 216);
+            padding: 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 1. Usuario informa valor em graus , função devolve farenheith, 
+       2. Usuario informa 3 numeros , função devolve o maior,
+       3. Usuario informa um valor , a função retorna uma %: 
+         *Valor maior que 500, devolve 13,5% do valor
+         *Valor menos que 500, devolve 9,98% do valor
+         *Se não devolve -1 -->
+    
+    <h1>Exercicios 1, 2 ou 3</h1>
+         <br><br>
+    <select id="selectTipo">
+        <option value="1">Selecione</option>
+        <option value="2">De ºC para ºF</option>
+        <option value="3">Maior dos 3 valores</option>
+        <option value="4">Devolve porcentagem expecifica</option>
+    </select><br><br>
+    <button type="button" id="btnProximo">Proximo</button><br><br>
+
+    <div class="esconder" id="selectTipo1">
+        <h2>De ºC para ºF</h2>
+
+        <p>Temperatura em Graus ºC</p>
+        <input type="number" id="grausC">
+        <p id="grausF"></p>
+        <br><br>
+    </div>
+
+
+    <div class="esconder" id="selectTipo2">
+        <h2>Maior dos 3 valores</h2>
+
+        <p>Numero 1</p>
+        <input type="number" id="numero1"> <br>
+        <p>Numero 2</p>
+        <input type="number" id="numero2"> <br>
+        <p>Numero 3</p>
+        <input type="number" id="numero3"> <br>
+        <p id ="resultado 2"></p>
+    </div>
+
+
+    <div class="esconder" id="selectTipo3">
+        <h2>Devolve poprcentagem expecifica </h2>
+
+        <p>Valor</p>
+        <input type="number" id="valor"> <br>
+        <p id ="resultado 3"></p>
+        <br><br>
+    </div>
+
+    <button type="button" id="btnExecutar">Executar</button>
+
+
+
+</body>
+
+<script src="app.js"></script>
+
+</html>

@@ -17,147 +17,148 @@ var msgGeral = document.getElementsByClassName('msg-geral')[0];
 // esconder tudo no click e fazer exibir um ou o outro , ja resolve...
 
 
-btnProximo.addEventListener('click' , function() {
-  if (selectTipo.value == 1  ){
-    selectTipo1.classList.remove('esconder');
-    selectTipo1.classList.add('exibir');
-    selectTipo2.classList.remove('exibir');
-    selectTipo2.classList.add('esconder');
-}else if(selectTipo.value == 2){
-    selectTipo2.classList.remove('esconder');
-    selectTipo2.classList.add('exibir');
-    selectTipo1.classList.remove('exibir');
-    selectTipo1.classList.add('esconder');
-}
-else{
-    selectTipo1.classList.remove('exibir');
-    selectTipo1.classList.add('esconder');
-    selectTipo2.classList.remove('exibir');
-    selectTipo2.classList.add('esconder');
-    msgGeral.classList.remove('exibir');
-    msgGeral.classList.add('esconder');
-    inputNome.style.border = '1px solid black';
-    
-
-}})
+btnProximo.addEventListener('click', function () {
+    if (selectTipo.value == 1) {
+        selectTipo1.classList.remove('esconder');
+        selectTipo1.classList.add('exibir');
+        selectTipo2.classList.remove('exibir');
+        selectTipo2.classList.add('esconder');
+    } else if (selectTipo.value == 2) {
+        selectTipo2.classList.remove('esconder');
+        selectTipo2.classList.add('exibir');
+        selectTipo1.classList.remove('exibir');
+        selectTipo1.classList.add('esconder');
+    }
+    else {
+        selectTipo1.classList.remove('exibir');
+        selectTipo1.classList.add('esconder');
+        selectTipo2.classList.remove('exibir');
+        selectTipo2.classList.add('esconder');
+        msgGeral.classList.remove('exibir');
+        msgGeral.classList.add('esconder');
+        inputNome.style.border = '1px solid black';
 
 
+    }
+})
 
-btnGravar.addEventListener('click' , function(){
+
+
+btnGravar.addEventListener('click', function () {
     msgGeral.innerHTML = '';
 
     //Nome
 
-    if(inputNome.value == ''){
-        inputNome.style.border = '1px solid red';               
+    if (inputNome.value == '') {
+        inputNome.style.border = '1px solid red';
         msgGeral.innerHTML += 'Erro: <br> # Nome não informado!';
         msgGeral.classList.remove('esconder');
         msgGeral.classList.add('exibir');
         console.log('Nome não informado!');
-    }else{
+    } else {
         inputNome.style.border = '1px solid green';
         msgGeral.classList.add('esconder');
-      msgGeral.classList.remove('exibir');
+        msgGeral.classList.remove('exibir');
         console.log('Nome informado ' + inputNome.value);
     }
-  
 
-    if(selectTipo1.classList == 'exibir'){
+
+    if (selectTipo1.classList == 'exibir') {
 
         //CNPJ
-        if(inputCNPJ.value.length !== 14 ){
-            inputCNPJ.style.border = '1px solid red';               
+        if (inputCNPJ.value.length !== 14) {
+            inputCNPJ.style.border = '1px solid red';
             msgGeral.innerHTML += '<br> # CNPJ não contem os 14 digitos!';
             msgGeral.classList.remove('esconder');
             msgGeral.classList.add('exibir');
             console.log('CNPJ não contem os 14 digitos!');
-        }else{
+        } else {
             inputCNPJ.style.border = '1px solid green';
             msgGeral.classList.add('esconder');
-          msgGeral.classList.remove('exibir');
+            msgGeral.classList.remove('exibir');
             console.log('CNPJ informado ' + inputCNPJ.value);
         }
-    
+
         //IE
-        if(inputIE.value.length !== 12 ){
-            inputIE.style.border = '1px solid red';               
+        if (inputIE.value.length !== 12) {
+            inputIE.style.border = '1px solid red';
             msgGeral.innerHTML += '<br> # IE não contem os 12 digitos!';
             msgGeral.classList.remove('esconder');
             msgGeral.classList.add('exibir');
             console.log('IE não contem os 12 digitos!');
-        }else{
+        } else {
             inputIE.style.border = '1px solid green';
             msgGeral.classList.add('esconder');
-          msgGeral.classList.remove('exibir');
+            msgGeral.classList.remove('exibir');
             console.log('IE informado ' + inputIE.value);
         }
 
         //Nome Fantasia
 
-    if(inputNomeFantasia.value == ''){
-        inputNomeFantasia.style.border = '1px solid red';               
-        msgGeral.innerHTML += 'Erro: <br> # Nome Fantasia não informado!';
-        msgGeral.classList.remove('esconder');
-        msgGeral.classList.add('exibir');
-        console.log('Nome Fantasia não informado!');
-    }else{
-        inputNome.style.border = '1px solid green';
-        msgGeral.classList.add('esconder');
-      msgGeral.classList.remove('exibir');
-        console.log('Nome Fantasia informado ' + inputNomeFantasia.value);
-    }
+        if (inputNomeFantasia.value == '') {
+            inputNomeFantasia.style.border = '1px solid red';
+            msgGeral.innerHTML += 'Erro: <br> # Nome Fantasia não informado!';
+            msgGeral.classList.remove('esconder');
+            msgGeral.classList.add('exibir');
+            console.log('Nome Fantasia não informado!');
+        } else {
+            inputNome.style.border = '1px solid green';
+            msgGeral.classList.add('esconder');
+            msgGeral.classList.remove('exibir');
+            console.log('Nome Fantasia informado ' + inputNomeFantasia.value);
+        }
 
-    }else if(selectTipo2.classList == 'exibir'){
+    } else if (selectTipo2.classList == 'exibir') {
 
         msgGeral.classList.remove('exibir');
         msgGeral.classList.add('esconder');
-            //CPF
+        //CPF
 
-    if(inputCPF.value.length !== 11){
-        inputCPF.style.border = '1px solid red';               
-        msgGeral.innerHTML += '<br> # CPF não contem os 11 digitos!';
-        msgGeral.classList.remove('esconder');
-        msgGeral.classList.add('exibir');
-        console.log('CPF não contem os 11 digitos!');
-    }else{
-        inputCPF.style.border = '1px solid green';
-        msgGeral.classList.add('esconder');
-      msgGeral.classList.remove('exibir');
-        console.log('CPF informado ' + inputCPF.value);
+        if (inputCPF.value.length !== 11) {
+            inputCPF.style.border = '1px solid red';
+            msgGeral.innerHTML += '<br> # CPF não contem os 11 digitos!';
+            msgGeral.classList.remove('esconder');
+            msgGeral.classList.add('exibir');
+            console.log('CPF não contem os 11 digitos!');
+        } else {
+            inputCPF.style.border = '1px solid green';
+            msgGeral.classList.add('esconder');
+            msgGeral.classList.remove('exibir');
+            console.log('CPF informado ' + inputCPF.value);
+        }
+
+        //RG
+
+        if (inputRG.value.length !== 10) {
+            inputRG.style.border = '1px solid red';
+            msgGeral.innerHTML += ' <br> # RG não contem os 14 digitos!';
+            msgGeral.classList.remove('esconder');
+            msgGeral.classList.add('exibir');
+            console.log('RG não contem os 10 digitos!');
+        } else {
+            inputRG.style.border = '1px solid green';
+            msgGeral.classList.add('esconder');
+            msgGeral.classList.remove('exibir');
+            console.log('RG informado ' + inputRG.value);
+        }
+
+        //Idade
+
+        if (inputIdade.value < 18) {
+            inputIdade.style.border = '1px solid red';
+            msgGeral.innerHTML += '<br> # Idade não correspondente!';
+            msgGeral.classList.remove('esconder');
+            msgGeral.classList.add('exibir');
+            console.log('Idade não correspondente!');
+        } else {
+            inputIdade.style.border = '1px solid green';
+            msgGeral.classList.add('esconder');
+            msgGeral.classList.remove('exibir');
+            console.log('Idade informada ' + inputCNPJ.value);
+        }
     }
 
-    //RG
 
-    if(inputRG.value.length !== 10 ){
-        inputRG.style.border = '1px solid red';               
-        msgGeral.innerHTML += ' <br> # RG não contem os 14 digitos!';
-        msgGeral.classList.remove('esconder');
-        msgGeral.classList.add('exibir');
-        console.log('RG não contem os 10 digitos!');
-    }else{
-        inputRG.style.border = '1px solid green';
-        msgGeral.classList.add('esconder');
-      msgGeral.classList.remove('exibir');
-        console.log('RG informado ' + inputRG.value);
-    }
-
-    //Idade
-
-    if(inputIdade.value < 18 ){
-        inputIdade.style.border = '1px solid red';               
-        msgGeral.innerHTML += '<br> # Idade não correspondente!';
-        msgGeral.classList.remove('esconder');
-        msgGeral.classList.add('exibir');
-        console.log('Idade não correspondente!');
-    }else{
-        inputIdade.style.border = '1px solid green';
-        msgGeral.classList.add('esconder');
-      msgGeral.classList.remove('exibir');
-        console.log('Idade informada ' + inputCNPJ.value);
-    }
-    }
-
-    
 
 
 })
