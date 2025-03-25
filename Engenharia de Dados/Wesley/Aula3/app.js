@@ -3,6 +3,7 @@ var inputNome = document.getElementById('nome');
 var msgNome = document.getElementsByClassName('msg-nome')[0];
 var msgGeral = document.getElementsByClassName('msg-geral')[0];
 
+
 // botão validando o que foi escrito no input
 btnValidar.addEventListener('click' , function() {
   //console.log ('teste');
