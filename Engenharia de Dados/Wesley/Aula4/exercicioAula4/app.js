@@ -44,9 +44,7 @@ btnExecutar.addEventListener('click' , function(){
     inputGrausF.innerHTML = grausCParaGrausF(numero);
 
     // Ex2
-    if(){
-
-    }
+   
 
     // Ex3
 

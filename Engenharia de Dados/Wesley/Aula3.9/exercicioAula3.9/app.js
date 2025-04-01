@@ -18,6 +18,8 @@ var msgGeral = document.getElementsByClassName('msg-geral')[0];
 
 
 btnProximo.addEventListener('click', function () {
+
+    
     if (selectTipo.value == 1) {
         selectTipo1.classList.remove('esconder');
         selectTipo1.classList.add('exibir');
