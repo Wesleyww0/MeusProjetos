@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+
+<body>
+
+    <form>
+
+        <h1>Produto</h1>
+        <p>Id:</p>
+        <input type="text" id="id">
+        <p>Descrição:</p>
+        <input type="text" id="descricao">
+        <p>TabelaValores</p>
+        <label for="150">
+            <input type="checkbox" id="valor150" value="150">150,00
+        </label>
+        <label for="100">
+            <input type="checkbox" id="valor100" value="100">100,00
+        </label>
+        <label for="130">
+            <input type="checkbox" id="valor130" value="130">130,00
+        </label>
+
+        <p>Categorias</p>
+        <label for="Bebidas">
+            <input type="checkbox" id="bebidas" value="Bebidas">Bebidas
+        </label>
+        <label for="Mercearia">
+            <input type="checkbox" id="mercearia" value="Mercearia">Mercearia
+        </label>
+
+
+
+        <button type="button" id="gravar">Gravar</button>
+        <button type="button" id="exibir">Exibir Dados</button><br>
+
+        <div id="resultado"></div>
+    </form>
+
+</body>
+<script src="app.js"></script>
+
+</html>
