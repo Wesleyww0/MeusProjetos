@@ -52,11 +52,14 @@ const pessoas = [
 
 // criar
  // localStorage.setItem('Matéria', 'Programação para Sitios')
+
 // exibir
   //var materia = localStorage.getItem('Matéria')
   //console.log(materia)
+
 // remover itens
   //localStorage.removeItem('Matéria')
+  
 // criando e limpando ..., limpar
 
 //localStorage.setItem('Matéria', 'Programação para Sitios')

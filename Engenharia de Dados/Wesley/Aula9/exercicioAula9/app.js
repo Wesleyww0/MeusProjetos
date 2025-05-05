@@ -7,11 +7,20 @@ const carros = [
 
 var btnGravar = document.getElementById('btnGravar');
 var btnLimpar = document.getElementById('btnLimpar');
-var inputModelo = document.getElementById('modelo');
-var inputPlaca = document.getElementById('placa');
+var inputModelo = document.getElementById('modelo').value;
+var inputPlaca = document.getElementById('placa').value;
+
+
 
 btnGravar.addEventListener('click', function (){
-
-  console.log('Modelo informado ' + inputModelo.value);
-  console.log('Placa informada ' + inputPlaca.value);
+//novoid = 0
+  //if(novoid >= 0){
+  //  novoid += 1;
+  //  
+  //}  
+  var jsonObj = JSON.stringify(carros)
+  localStorage.setItem('carros', jsonObj)
+  
+ 
 })
+// ------------------------------

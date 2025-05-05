@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cadastro de Carros</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    input {
+      margin-right: 10px;
+      padding: 5px;
+    }
+    button {
+      padding: 5px 10px;
+    }
+    table {
+      margin-top: 20px;
+      border-collapse: collapse;
+      width: 50%;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Cadastro de Carros</h2>
+
+<!-- Inputs para modelo e placa -->
+<p>Modelo</p>
+<input type="text" id="modelo"/>
+<p>Placa</p>
+<input type="text" id="placa"/>
+<button type="button" id="btnGravar">Gravar</button>
+
+<!-- Tabela para exibir os carros -->
+<table id="tabelaCarros">
+  <thead>
+    <tr>
+      <th>Modelo</th>
+      <th>Placa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Linhas serão adicionadas aqui -->
+  </tbody>
+</table>
+
+<script src="app.js"></script>
+</body>
+</html>

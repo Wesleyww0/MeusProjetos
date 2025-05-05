@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<title>Atualizar Tabela em Tempo Real</title>
+<style>
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 8px;
+  }
+</style>
+</head>
+<body>
+
+<h2>Adicionar Dados à Tabela</h2>
+
+<!-- Formulário para entrada de dados -->
+<form id="dadosForm">  
+  <label>Modelo:</label>
+  <input type="text" id="modelo"  />
+  <br /><br />
+  <label>Placa:</label>
+  <input type="number" id="placa" />
+  <br /><br />
+  <button type="button" id="btnGravar">Gravar</button>
+</form>
+
+<br />
+
+<!-- Tabela para exibir os dados -->
+<table id="tabelaDados">
+  <thead>
+    <tr>
+      <th>Modelo</th>
+      <th>Placa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Linhas serão adicionadas aqui -->
+  </tbody>
+</table>
+</body>
+<script src="app.js"></script>
+</html>
