@@ -92,7 +92,7 @@ function carregarTarefas() {
 
     // Mapeamento das prioridades para cores
     const coresPrioridade = {
-        'baixa': 'bg-info-subtle',  // Verde claro
+        'baixa': 'bg-info-subtle',  // Azul claro
         'media': 'bg-warning-subtle',  // Amarelo claro
         'alta': 'bg-danger-subtle'    // Vermelho claro
     };
