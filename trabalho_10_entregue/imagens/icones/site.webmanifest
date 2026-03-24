@@ -1,0 +1,33 @@
+{
+  "name": "trabalho_09_entregue",
+  "short_name": "HQs",
+  "description": "Projeto integrador da Fatec sobre HQs.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#FFC107",
+  "icons": [
+    {
+      "src": "imagens/icones/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "imagens/icones/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "imagens/icones/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "imagens/icones/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "scope": "/",
+  "orientation": "portrait"
+}
